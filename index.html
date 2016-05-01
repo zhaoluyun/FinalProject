@@ -11,31 +11,101 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Map -->
+    <div id="map" class="map"></div>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Housing Price in Beijing</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active" id='main'><a href="#">Home</a></li>
+          <li id='school'><a href="#">School District Housing</a></li>
+          <li id='draw'><a href="#">Personal Drawing</a></li>
+        </ul>
+      </div>
+    </nav>
     <!-- Sidebar -->
     <div class="sidebar">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-              <h1>Second Hand Housing Sale Record in Beijing October 2014</h1>
-              <p>Show the House that costs between</p>
-              <label for="numeric-input1">$</label>
-              <input type="number" id="numeric-input1">
-              <p>and</p>
-              <label for="numeric-input2">$</label>
-              <input type="number" id="numeric-input2">
-              <button id='go'>Go</button>
-              <button id='clear'>Clear</button>
+              <h3 id ='title' >Second Hand Housing Sale Record in Beijing October 2014</h3>
+              <p id='subtitle'></p>
+            <div id='mainpage'>
+            <div>
+              <p class='word'>Show the House that costs between</p>
+              <form class="form-inline">
+                <div class="form-group">
+                  <label for="numeric-input1">￥</label>
+                  <input type="number" id="numeric-input1" class="form-control">
+                  <label for="numeric-input1">AND</label>
+                </div>
+                <div class="form-group">
+                  <label for="numeric-input2">￥</label>
+                  <input type="number" id="numeric-input2" class="form-control">
+                </div>
+                <button id='go1' type="button" class="btn btn-primary">Go</button>
+                <button id='clear1' type="button" class="btn btn-warning">Clear</button>
+              </form>
+            </div>
+            <div>
+              <p class='word'>Show the house that is away from subway station between</p>
+              <form class="form-inline">
+                <div class="form-group">
+                  <input type="number" id="numeric-input3" class="form-control">
+                  <label for="numeric-input3">Meter AND</label>
+                </div>
+                <div class="form-group">
+                  <input type="number" id="numeric-input4" class="form-control">
+                  <label for="numeric-input4">Meter</label>
+                </div>
+                <button id='go2' type="button" class="btn btn-primary">Go</button>
+                <button id='clear2' type="button" class="btn btn-warning">Clear</button>
+              </form>
+            </div>
+            <div>
+              <p class='word'>Show the house that is away from Top Primary School between</p>
+              <form class="form-inline">
+                <div class="form-group">
+                  <input type="number" id="numeric-input5" class="form-control">
+                  <label for="numeric-input5">Meter AND</label>
+                </div>
+                <div class="form-group">
+                  <input type="number" id="numeric-input6" class="form-control">
+                  <label for="numeric-input6">Meter</label>
+                </div>
+                <button id='go3' type="button" class="btn btn-primary">Go</button>
+                <button id='clear3' type="button" class="btn btn-warning">Clear</button>
+              </form>
+            </div>
+            <div>
+              <p class='word'>Show the house that is away from Top Middle School between</p>
+              <form class="form-inline">
+                <div class="form-group">
+                  <input type="number" id="numeric-input7" class="form-control">
+                  <label for="numeric-input7">Meter AND</label>
+                </div>
+                <div class="form-group">
+                  <input type="number" id="numeric-input8" class="form-control">
+                  <label for="numeric-input8">Meter</label>
+                </div>
+                <button id='go4' type="button" class="btn btn-primary">Go</button>
+                <button id='clear4' type="button" class="btn btn-warning">Clear</button>
+              </form>
+            </div>
+            </div>
           </div>
-            <button id='school'>Explore School District Housing</button>
-            <button id='draw'>Explore: Personal Drawing</button>
+        </div>
+        <div class="container-fluid">
+          <p id='average'></p>
+          <ul id="project-list" class="list-group">
         </div>
       </nav>
-      <div class="container-fluid">
-        <ul id="project-list" class="list-group">
-      </div>
+
     </div>
-    <!-- Map -->
-    <div id="map" class="map"></div>
+
     <!-- Javascript Imports -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
